@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Advice | Life Should Be Happy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #fff8f0, #ffe8d9, #ffd6cc);
+  color: #2d2d2d;
+  line-height: 1.8;
+}
+
+.skyline {
+  height: 100vh;
+  background: url('HAPPYADVICE.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.skyline::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero-heart {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero-heart h1 {
+  font-size: 4rem;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.hero-heart p {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: auto;
+}
+
+.gentle-wrap {
+  padding: 100px 12%;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(10px);
+}
+
+.soft-title,
+.story-vibe h3,
+.motion-thought h3,
+.future-wave h2 {
+  color: #ff6b4a;
+}
+
+.soft-title {
+  font-size: 2.7rem;
+  margin-bottom: 25px;
+}
+
+.calm-text {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 22px;
+}
+
+.book-bloom,
+.motion-space {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 70px;
+}
+
+.book-bloom img,
+.motion-space video,
+.motion-space iframe {
+  width: 340px;
+  max-width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+}
+
+.story-vibe,
+.motion-thought {
+  flex: 1;
+  min-width: 320px;
+  max-width: 700px;
+}
+
+.story-vibe h3,
+.motion-thought h3 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.story-vibe p,
+.motion-thought p {
+  color: #555;
+  margin-bottom: 18px;
+}
+
+.future-wave {
+  margin-top: 100px;
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.future-wave video {
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.future-wave h2 {
+  margin-top: 35px;
+  font-size: 2.3rem;
+}
+
+.future-wave p {
+  margin-top: 18px;
+  color: #555;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.follow-glow {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #ff6b4a, #ff9a62);
+  color: white;
+  text-decoration: none;
+  border-radius: 40px;
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(255,107,74,0.3);
+}
+
+.follow-glow:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(255,107,74,0.4);
+}
+
+footer {
+  padding: 30px;
+  text-align: center;
+  background: linear-gradient(135deg, #ff6b4a, #ff9a62);
+  color: white;
+  font-size: 0.95rem;
+}
+
+@media(max-width: 900px) {
+  .book-bloom,
+  .motion-space {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .story-vibe,
+  .motion-thought {
+    min-width: 100%;
+  }
+
+  .hero-heart h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-heart p {
+    font-size: 1.1rem;
+  }
+
+  .soft-title {
+    font-size: 2rem;
+  }
+
+  .story-vibe h3,
+  .motion-thought h3 {
+    font-size: 1.8rem;
+  }
+ 
+}
+
+@media(max-width: 600px) {
+  .gentle-wrap {
+    padding: 70px 8%;
+  }
+
+  .hero-heart h1 {
+    font-size: 2.2rem;
+  }
+
+  .future-wave h2 {
+    font-size: 1.8rem;
+  }
+
+  .neuro-flow {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #1a0d00, #120500, #050200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#mindMesh {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.joy-core {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.joy-core h2 {
+  font-size: 4rem;
+  letter-spacing: 4px;
+  color: #ff9a62;
+  text-shadow: 0 0 25px rgba(255,154,98,0.7);
+}
+
+.joy-core p {
+  font-size: 1.2rem;
+  color: rgba(255,255,255,0.85);
+  margin-top: 15px;
+}
+}
+</style>
+</head>
+<body>
+
+  <section class="skyline">
+    <div class="hero-heart">
+      <h1>Happy Advice</h1>
+      <p>Your daily space for happiness, perspective, and a better way to live.</p>
+    </div>
+
+    
+  </section>
+
+  <section class="gentle-wrap">
+    <h2 class="soft-title">Daily Happiness Starts Here</h2>
+    <p class="calm-text">
+      Happy Advice is an online platform created to inspire people through thoughtful articles, emotional wisdom, and life-changing perspectives about happiness. 
+      Our mission is simple — helping people discover that happiness is not something distant, but something that can be created daily through mindset, action, and understanding.
+    </p>
+    <p class="calm-text">
+      From personal growth and emotional healing to motivation and philosophical reflections, Happy Advice delivers meaningful content for modern readers seeking peace in a chaotic world.
+    </p>
+    <p class="calm-text"><b>
+      We believe happiness is an art form, and every person deserves access to ideas that can brighten their life, reshape their perspective, and create lasting fulfillment.</b>
+    </p>
+
+    <div class="neuro-flow">
+  <canvas id="mindMesh"></canvas>
+  <div class="joy-core">
+  </div>
+</div>
+
+    <article style="max-width: 800px; margin: auto; padding: 30px; font-family: Poppins, sans-serif; line-height: 1.9; color: #444;">
+  <h2 style="color: #ff6b4a; font-size: 2.2rem; margin-bottom: 20px;">
+    The Beauty of Morning Life
+  </h2>
+
+  <p>
+    Every morning offers a <b style="color: #ff6b4a;">fresh beginning</b>, a quiet reminder that life continuously renews itself no matter what happened yesterday. 
+    As sunlight gently fills the sky, people are given another opportunity to grow, heal, and move closer toward happiness. 
+    The early hours hold a special kind of peace, where the world feels softer and the mind becomes clearer.
+  </p>
+
+  <p>
+    Waking up with purpose can transform an ordinary day into something meaningful. 
+    Whether it is enjoying warm coffee, exercising, journaling, or simply breathing deeply, morning habits shape emotional strength. 
+    <i style="color: #ff9a62;">A peaceful morning often creates a powerful life.</i> 
+    It is in these small routines that motivation is quietly built.
+  </p>
+
+  <p>
+    Life in the morning teaches us that happiness does not always come from major achievements, but often from appreciating simple moments. 
+    Birds singing, cool air, and golden sunlight can inspire gratitude. 
+    <b style="color: #8d35f1;">Each sunrise is proof</b> that we can begin again, stronger, wiser, and ready to embrace the beauty of living.
+  </p>
+</article>
+
+>
+
+    <div class="book-bloom">
+      <img src="book.jpg" alt="Life Should Be Happy Book Cover">
+
+      <div class="story-vibe">
+        <h3>Life Should Be Happy</h3>
+        <p>
+          A bilingual book in both Thai and English, written by a young visionary author with a unique perspective on happiness, life, and emotional freedom.
+        </p>
+        <p>
+          This book explores what happiness truly means in a world filled with pressure, comparison, and uncertainty. Through relatable thoughts, deep reflections, and inspiring philosophies, readers are guided toward discovering their own version of happiness.
+        </p>
+        <p>
+          More than just a motivational book, Life Should Be Happy is a voice of modern youth — proving that age does not define wisdom, and sometimes the most refreshing truths come from the youngest minds.
+        </p>
+      </div>
+    </div>
+
+  <center><video autoplay muted loop playsinline style="width: 280px; max-width: 100%; border-radius: 18px; box-shadow: 0 15px 35px rgba(0,0,0,0.12);">
+  <source src="LSBH.mp4" type="video/mp4">
+</video>
+
+      <div class="motion-thought">
+        <h3>Discover The Story Behind The Book</h3>
+        <p>
+          Watch the creator explain the heart, philosophy, and emotional meaning behind Life Should Be Happy.
+        </p>
+        <p><b>
+          This project represents a modern movement of positivity, realistic hope, and creative self-reflection designed for readers who seek more than surface-level advice.
+       </b> </p>
+      </div>
+    </div>
+
+
+    <div class="motion-space">
+  <iframe width="420" height="236" 
+    src="https://www.youtube.com/embed/NmlWK-zCo6M" 
+    title="How To Be Happy - THE TRUTH"
+    frameborder="0" 
+    allowfullscreen
+    style="border-radius:18px; box-shadow:0 15px 35px rgba(0,0,0,0.12);">
+  </iframe>
+
+  <div class="motion-thought">
+    <h3>Start Your Morning With Happiness</h3>
+    <p>
+      If you want to create a happier morning today, this powerful video can help shift your mindset, inspire your heart, and guide you toward a more meaningful day.
+    </p>
+    <p>
+      Sometimes happiness begins with understanding the deeper truth behind what truly fulfills us.
+    </p>
+    <p>
+      <b></b><strong>Credit:</strong></b> This video, “How To Be Happy - THE TRUTH,” is from the YouTube channel Improvement Pill.
+    </p>
+  </div>
+</div>
+
+    <div class="future-wave">
+      <video autoplay muted loop playsinline>
+        <source src="banner.mp4" type="video/mp4">
+      </video>
+
+      <h2>More Is Coming Soon</h2>
+      <p>
+        A new generation of happiness content is on the way — more modern, more powerful, and more connected to today's world.
+        Follow our page to stay updated on upcoming releases, new books, and fresh inspiration designed for the future.
+      </p>
+
+      <a href="#" class="follow-glow">Follow Our Page</a>
+    </div>
+  </section>
+
+
+  <footer>
+    © 2026 HappyAdvice.online | Designed to inspire happiness every day.
+  </footer>
+  <script>
+const canvas = document.getElementById('mindMesh');
+const ctx = canvas.getContext('2d');
+
+function resizeMind() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeMind();
+window.addEventListener('resize', resizeMind);
+
+const particles = [];
+
+for (let i = 0; i < 120; i++) {
+  particles.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    vx: (Math.random() - 0.5) * 1.2,
+    vy: (Math.random() - 0.5) * 1.2,
+    size: Math.random() * 3 + 1
+  });
+}
+
+function animateMind() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  for (let i = 0; i < particles.length; i++) {
+    const p = particles[i];
+
+    p.x += p.vx;
+    p.y += p.vy;
+
+    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+    ctx.fillStyle = 'rgba(255,160,90,0.9)';
+    ctx.fill();
+
+    for (let j = i + 1; j < particles.length; j++) {
+      const q = particles[j];
+      const dx = p.x - q.x;
+      const dy = p.y - q.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+
+      if (dist < 120) {
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y);
+        ctx.lineTo(q.x, q.y);
+        ctx.strokeStyle = `rgba(255,140,60,${1 - dist / 120})`;
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
+    }
+  }
+
+  requestAnimationFrame(animateMind);
+}
+
+animateMind();
+</script>
+</body>
+</html>
